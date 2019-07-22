@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 50px auto;
+  max-width: 1000px;
+  height: auto !important;
+  overflow: hidden;
+}
+
+h3.a-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 1.7rem !important;
+  color: white;
+  width: 450px;
+}
+
+h3.a-title:hover {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700 !important;
+  color: white;
+  width: 500px;
+  transition: .3s ease-in;
+}
+
+.accordion {
+  display: flex;
+  /* flex-direction: row; */
+  margin: auto;
+  width: 95%;
+  height: 450px;
+}
+
+.item {
+  display: block;
+  -webkit-flex: 1;
+  /* Safari 6.1+ */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1 1 30px;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+  transition: flex 0.8s ease;
+  /* transition: 1s; */
+  margin: 4px;
+  position: relative;
+  z-index: 0;
+}
+
+#accordion #item::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: .5s;
+}
+
+.a-p {
+  opacity: 0;
+}
+
+#accordion #item .a-p {
+  color: white;
+  position: absolute;
+  margin-top: 20px;
+  right: 20px;
+  text-align: right;
+  display: block;
+  width: 210px;
+  opacity: 0;
+  /* transition: .3s; */
+  line-height: 1.4;
+}
+
+#accordion #item:hover .a-p {
+  opacity: 1;
+  transition: .5s .5s;
+}
+
+#accordion .item.i-1 .a-title, #accordion .item.i-2 .a-title, #accordion .item.i-3 .a-title, #accordion .item.i-4 .a-title, #accordion .item.i-5 .a-title, #accordion .item.i-6 .a-title {
+  transform: rotate(-90deg) translateY(100%);
+  -webkit-transform-origin: left bottom;
+  position: absolute;
+  z-index: 99;
+  bottom: -18px;
+  left: 0px;
+  height: 433px;
+}
+
+.item:hover {
+  flex: 8;
+}
+
+#accordion #item:hover::after {
+  width: 100%;
+  transition: .3s ease-in;
+}
+
+#accordion #item:nth-child(1) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-chemicals.jpg');
+}
+
+#accordion #item:nth-child(2) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-compressed-liquids.jpg');
+}
+
+#accordion #item:nth-child(3) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-finished-products.jpg');
+}
+
+#accordion #item:nth-child(4) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-crude-oil.jpg');
+}
+
+#accordion #item:nth-child(5) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-dry-cargo.jpg');
+}
+
+#accordion #item:nth-child(6) {
+  background-image: url('http://floridamarine.wpengine.com/wp-content/uploads/2019/07/hero-infrastructure.jpg');
+}
+
+img.thumb {
+  display: block;
+  width: 32px;
+}
+
+@media only screen and (max-width:768px) {
+  #accordion #item .a-p {
+    width: 60%;
+    height: 90px;
+    font-size: .9rem;
+  }
+
+  .item {
+    flex: 1 1 10px;
+  }
+}
+
+@media only screen and (max-width:576px) {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    position: relative;
+  }
+
+  .item {
+    display: block;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1 1 10px;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    margin: 4px;
+    position: relative;
+    z-index: 0;
+  }
+
+  #accordion #item .a-p {
+    color: white;
+    position: absolute;
+    right: 20px;
+    width: 95%;
+    text-align: left;
+    display: block;
+    opacity: 0;
+    bottom: 0px;
+    left: 10px;
+    line-height: 1.4;
+  }
+
+  #accordion #item::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: .5s;
+  }
+
+  #accordion #item:hover::after {
+    height: 100%;
+  }
+
+  h3.a-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem !important;
+    color: white;
+    width: 400px;
+    height: 400px;
+  }
+
+  h3.a-title:hover {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700 !important;
+    color: white;
+    height: 400px;
+    width: 400px;
+    transition: .3s ease-in;
+  }
+
+  #accordion .item.i-1 .a-title, #accordion .item.i-2 .a-title, #accordion .item.i-3 .a-title, #accordion .item.i-4 .a-title, #accordion .item.i-5 .a-title, #accordion .item.i-6 .a-title {
+    transform: rotate(0deg) translate(4px, -23px);
+    -webkit-transform-origin: top left;
+    position: absolute;
+    height: 0px;
+    top: 0;
+    height: 190px;
+    width: 550px;
+    z-index: 99;
+  }
+}
+
+@media only screen and (max-width:576px) {
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    position: relative;
+  }
+
+  .item {
+    display: block;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1 1 10px;
+    /* height: 450px; */
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    /* transition: 1s; */
+    margin: 4px;
+    position: relative;
+    z-index: 0;
+  }
+
+  #accordion #item .a-p {
+    color: white;
+    position: absolute;
+    right: 20px;
+    width: 95%;
+    height: auto;
+    text-align: left;
+    display: block;
+    opacity: 0;
+    bottom: 0px;
+    left: 10px;
+    line-height: 1.4;
+  }
+
+  #accordion #item::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: .5s;
+  }
+
+  #accordion #item:hover::after {
+    height: 100%;
+  }
+
+  h3.a-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em !important;
+    color: white;
+    width: 400px;
+    height: 400px;
+  }
+
+  h3.a-title:hover {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700 !important;
+    color: white;
+    /* width:400%; */
+    height: 400px;
+    width: 400px;
+    transition: .3s ease-in;
+  }
+
+  #accordion .item.i-1 .a-title, #accordion .item.i-2 .a-title, #accordion .item.i-3 .a-title, #accordion .item.i-4 .a-title, #accordion .item.i-5 .a-title, #accordion .item.i-6 .a-title {
+    transform: rotate(0deg) translate(4px, -23px);
+    -webkit-transform-origin: top left;
+    position: absolute;
+    height: 0px;
+    top: 0;
+    height: 190px;
+    width: 550px;
+    z-index: 99;
+  }
+}
